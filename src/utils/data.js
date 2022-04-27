@@ -3,7 +3,7 @@ const data = {
   question_groups: [
     {
       type: 'question_group',
-      title: '跟水果有關ㄉ問題',
+      title: '跟水果有關的問題',
       questions: [
         {
           type: 'question',
@@ -27,7 +27,7 @@ const data = {
     },
     {
       type: 'question_group',
-      title: '跟動物有關ㄉ問題',
+      title: '跟動物有關的問題',
       questions: [
         {
           type: 'question',
@@ -51,7 +51,7 @@ const data = {
     },
     {
       type: 'question_group',
-      title: '跟顏色有關ㄉ問題',
+      title: '跟顏色有關的問題',
       questions: [
         {
           type: 'question',
@@ -89,7 +89,7 @@ const data = {
     },
     {
       type: 'question_group',
-      title: '跟食物有關ㄉ問題',
+      title: '跟食物有關的問題',
       questions: [
         {
           type: 'question',

@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
     <div v-for="(group, index) in formData.question_groups" :key="index">
+      <div class="question-group-title">{{ `${index+1}. ${group.title}` }}</div>
       <div v-for="(question, i) in group.questions" :key="i">
+        <div class="question-title">{{ `(${i+1}) ${question.title}` }}</div>
         <Question :inputItems="question.inputItems"/>
       </div>
     </div>
@@ -31,18 +33,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.question-group-title {
+  text-align: left;
+  font-size: 20px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.question-title {
+  text-align: left;
+  font-size: 16px;
 }
 </style>

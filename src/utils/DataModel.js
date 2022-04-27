@@ -26,14 +26,16 @@ class Sheet {
 }
 
 class QGroup {
-  constructor() {
+  constructor(qgroupData) {
     this.questions = []
+    this.title = qgroupData.title
   }
 }
 
 class Question {
-  constructor() {
+  constructor(q) {
     this.inputItems = []
+    this.title = q.title
   }
 }
 
@@ -66,7 +68,7 @@ export class TextInput extends InputItem {
 function buildQGroup(qgroupData) {
   let qgroupObj = {}
   if(qgroupData.type === 'question_group') {
-    qgroupObj = new QGroup()
+    qgroupObj = new QGroup(qgroupData)
     qgroupData.questions.forEach(q => {
       let question = buildQuestion(q)
       qgroupObj.questions.push(question)
@@ -78,7 +80,7 @@ function buildQGroup(qgroupData) {
 function buildQuestion(q) {
   let qObj = {}
   if(q.type === 'question') {
-    qObj = new Question()
+    qObj = new Question(q)
     q.inputItems.forEach(item => {
       let inputItem = buildInputItem(item)
       qObj.inputItems.push(inputItem)
